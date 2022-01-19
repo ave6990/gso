@@ -1,10 +1,17 @@
 <script>
-	export let name;
+    import { onMount } from 'svelte'
+    import Component from './Component.svelte'
+
+	export let name
+
+    let content
+
+    console.info('hello')
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+    <Component {content}/>
 </main>
 
 <style>

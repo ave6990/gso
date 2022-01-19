@@ -1,0 +1,17 @@
+import fs from 'fs'
+
+const read = () => {
+    const db = {}
+
+    fs.readFile('./db/gsoTable.json', 'utf-8', (err, data) => {
+        db.gsoTable = JSON.parse(data)
+    })
+
+    return db
+}
+
+const write = () => {
+    fs.writeFile('./db/gsoTable.json', 'utf-8', JSON.stringify(db.gsoTable))
+}
+
+export { read, write }
