@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte'
-    import Component from './Component.svelte'
+    import Main from './Main.svelte'
 
 	export let name
 
@@ -11,7 +11,7 @@
 
 <main>
 	<h1>Hello {name}!</h1>
-    <Component/>
+    <Main/>
 </main>
 
 <style>

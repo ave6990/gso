@@ -1,23 +1,21 @@
 <script>
     import { onMount } from 'svelte'
-
-    let content
+    import GsoTable from './GsoTable.svelte'
+    let items
 
     onMount(async () => {
         await fetch('http://localhost:8081/')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                content = data.gsoTable
+                items = data.gsoTable
             })
     })
 </script>
 
-<p>
-    {#if content}
-        {content}
-    {:else}
-        waiting...
-    {/if}
-</p>
+{#if items}
+    <GsoTable items={[items[0], items[1]]}/>
+{:else}
+    <p>Waiting...</p>
+{/if}
 
