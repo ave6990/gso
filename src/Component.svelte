@@ -7,6 +7,7 @@
         await fetch('http://localhost:8081/')
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 content = data.gsoTable
             })
     })
