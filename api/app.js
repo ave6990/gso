@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send({ gsoTable: 'good', })
+    res.send(db)
 })
 
 app.listen(8081, () => {
