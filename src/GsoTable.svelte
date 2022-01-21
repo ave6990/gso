@@ -2,6 +2,8 @@
     import GsoItem from './GsoItem.svelte'
 
     export let items
+
+    console.log(items)
 </script>
 
 <main>

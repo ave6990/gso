@@ -9,29 +9,17 @@
     console.info('hello')
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-    <Main/>
-</main>
+<Main header='БД ГСО'/>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 2em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    :global(body) {
+        margin: 0px;
+        padding: 0px;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-rows: min-content 1fr min-content;
+    }
 </style>
+
+
