@@ -6,7 +6,6 @@
 
     let content
 
-    console.info('hello')
 </script>
 
 <svelte:head>

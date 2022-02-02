@@ -34,10 +34,12 @@
 <style>
     header, footer {
         font-size: 18px;
+        font-weight: bold;
         padding: 0px;
-        border: solid 1px #034769;
+        border: solid 1px #034780;
         border-radius: 4px;
-        color: #034769;
+        background: #034780;
+        color: white;
     }
 
     header {
