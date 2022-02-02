@@ -14,8 +14,11 @@
 </script>
 
 <header>
-    <p>{header}</p>
+    {header}
 </header>
+<nav>
+
+</nav>
 <main>
     {#if content}
         <GsoTable items={[content[0], content[1]]}/>
@@ -31,9 +34,7 @@
 <style>
     header, footer {
         font-size: 18px;
-        padding: 6px;
-        /*background: #034769;
-        color: #fafafa;*/
+        padding: 0px;
         border: solid 1px #034769;
         border-radius: 4px;
         color: #034769;
@@ -42,13 +43,12 @@
     header {
         grid-row: 1;
         grid-column: 1 / 4;
-        padding: 0px;
+        padding-left: 10px;
     }
 
     footer {
         grid-row: 3;
         grid-column: 1 / 4;
-        padding: 0px;
         text-align: center;
     }
 
