@@ -105,3 +105,6 @@ dist
 
 # Vim temp files
 *.swp
+
+# Temp build files
+public/build/
