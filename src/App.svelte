@@ -9,6 +9,10 @@
     console.info('hello')
 </script>
 
+<svelte:head>
+    <title>{name}</title>
+</svelte:head>
+
 <Main header='БД ГСО'/>
 
 <style>
