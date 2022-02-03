@@ -2,6 +2,8 @@
     import { onMount } from 'svelte'
     import GsoTable from './GsoTable.svelte'
     export let header
+
+    let uploadFiles
     let content
 
     onMount(async () => {
@@ -11,6 +13,22 @@
                 content = JSON.parse(data.gsoTable)
             })
     })
+
+    const submitForm = (event) {
+        event.preventDefault()
+        const data = new FormData()
+        data.append('files', {type: 'test_message', value: true})
+
+        fetch('http://localhost:8081/', {
+            method: 'POST',
+            headers: [['Content-Type', 'multipart/form-data']],
+            body: data,
+        })
+        .then(response => {
+        })
+        .catch(error => {
+        })
+    }
 </script>
 
 <header>
@@ -20,6 +38,10 @@
 
 </nav>
 <main>
+    <form on:submit={submitForm}>
+        <input type='file' bind:files={uploadFiles}/>
+        <input type='submit'/>
+    </form>
     {#if content}
         <GsoTable items={[content[0], content[1]]}/>
     {:else}

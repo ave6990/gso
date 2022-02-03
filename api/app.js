@@ -13,6 +13,17 @@ app.get('/', (req, res) => {
     res.send(db)
 })
 
+app.post('/', async (req, res) => {
+    try {
+        const data = await req.files
+        console.log(file)
+        res.send({status: 200})
+    } catch (err) {
+        console.log('An error has occured!')
+        console.log(err)
+    }
+})
+
 app.listen(8081, () => {
     console.log('App\'s running on port 8081')
 })
