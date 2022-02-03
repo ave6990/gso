@@ -14,10 +14,10 @@
             })
     })
 
-    const submitForm = (event) {
+    const submitForm = (event) => {
         event.preventDefault()
         const data = new FormData()
-        data.append('files', {type: 'test_message', value: true})
+        data.append('files', data)
 
         fetch('http://localhost:8081/', {
             method: 'POST',

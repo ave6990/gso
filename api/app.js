@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
     try {
         const data = await req.files
-        console.log(file)
+        console.log(data)
         res.send({status: 200})
     } catch (err) {
         console.log('An error has occured!')
